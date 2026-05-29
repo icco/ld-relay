@@ -16,6 +16,14 @@ All notable changes to the LaunchDarkly Relay will be documented in this file. T
 * New `[OpenTelemetry]` configuration section exports metrics and traces via OTLP (gRPC or HTTP/protobuf) to any OpenTelemetry-compatible backend (New Relic, Honeycomb, Grafana, AWS Distro, etc.). Standard `OTEL_*` environment variables are honored. Closes [launchdarkly/ld-relay#582](https://github.com/launchdarkly/ld-relay/issues/582).
 * Inbound HTTP requests are now wrapped with `otelmux`, producing one span per request named after the matched gorilla/mux route template.
 
+## [8.19.3](https://github.com/launchdarkly/ld-relay/compare/v8.19.2...v8.19.3) (2026-05-28)
+
+
+### Bug Fixes
+
+* Bump golang.org/x/* dependencies to address CVEs ([#676](https://github.com/launchdarkly/ld-relay/issues/676)) ([7c48b17](https://github.com/launchdarkly/ld-relay/commit/7c48b17c9bc604e4b09e72eef4909549587c849c))
+* Remove Prometheus transitive dependency ([#673](https://github.com/launchdarkly/ld-relay/issues/673)) ([5624ae6](https://github.com/launchdarkly/ld-relay/commit/5624ae6e00e0843d67d98857ceafac7bae25565d))
+
 ## [8.19.2](https://github.com/launchdarkly/ld-relay/compare/v8.19.1...v8.19.2) (2026-05-20)
 
 
